@@ -99,12 +99,13 @@ function classifyMessage(message) {
   };
 }
 
-function getAuditRows(message, result, decision = 'Pending human review') {
+function getAuditRows(message, result, sources, decision = 'Pending human review') {
+  const sourceSummary = sources.map((source) => source.id).join(', ');
   return [
     {
       actor: 'Portal',
       event: 'Message received',
-      detail: `${message.patient} submitted ${message.id}.`,
+      detail: `${message.patient} submitted ${message.id}: ${message.subject}.`,
       tone: 'neutral'
     },
     {
@@ -121,7 +122,13 @@ function getAuditRows(message, result, decision = 'Pending human review') {
     },
     {
       actor: 'SafeTriage Agent',
-      event: 'Urgency classified',
+      event: 'Sources retrieved',
+      detail: sourceSummary ? `${sourceSummary} used for grounding and reviewer verification.` : 'No source retrieved.',
+      tone: 'info'
+    },
+    {
+      actor: 'SafeTriage Agent',
+      event: 'Output generated',
       detail: `${result.label} (${Math.round(result.confidence * 100)}% confidence). Route: ${result.route}.`,
       tone: result.priority
     },
@@ -164,7 +171,7 @@ function App() {
     setDraftMode(false);
   }
 
-  const auditRows = getAuditRows(selected, result, decision);
+  const auditRows = getAuditRows(selected, result, sources, decision);
 
   return (
     <main className="app-shell">
@@ -426,7 +433,7 @@ function AuditTrail({ rows }) {
       <div className="panel-header horizontal compact">
         <div>
           <h1>Audit Trail</h1>
-          <p>Input, tool actions, output, and human decision</p>
+          <p>Input, action, source, timestamp, output, and human decision</p>
         </div>
         <button className="secondary small">
           Export
