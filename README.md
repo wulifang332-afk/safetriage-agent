@@ -4,6 +4,12 @@ SafeTriage is a course-project prototype for CA6117, demonstrating an agentic AI
 
 The prototype uses simulated patient data, clinic guideline snippets, safety rules, tool calls, human checkpoints, and an audit trail. It is designed for demonstration only and does not provide medical advice.
 
+## Interactive Prototype
+
+Live demo: https://wulifang332-afk.github.io/safetriage-agent/
+
+Use the sample patient inbox to run the agent workflow, switch between routine, medium-risk, high-risk, and prompt-injection cases, and try the human review controls.
+
 ## Features
 
 - Patient portal inbox with routine, medium-risk, and high-risk examples
