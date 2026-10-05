@@ -12,6 +12,10 @@ GitHub Pages demo, once Pages is enabled for the repository: https://wulifang332
 
 Use the sample patient inbox to run the agent workflow, switch between routine, medium-risk, high-risk, and prompt-injection cases, and try the human review controls.
 
+## Project Materials
+
+The written report, presentation deck, source-code archive, rendered slides, and prototype animation are collected in [`outputs/`](outputs/).
+
 ## Features
 
 - Patient portal inbox with routine, medium-risk, and high-risk examples

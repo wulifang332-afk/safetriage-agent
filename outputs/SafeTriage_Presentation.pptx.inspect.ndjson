@@ -1,0 +1,210 @@
+{"kind":"deck","id":"pr/jxemiu","name":"Deck"}
+{"kind":"layout","layoutId":"251663d7-3fc0-4f5a-b2e3-101d6c0f1a22","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"04f25a44-55fe-4d6d-8b68-7cda869819b8","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/mnrmxa","slide":1,"title":"SafeTriage","textShapes":6}
+{"kind":"textbox","id":"sh/lo3mps3y","slide":1,"text":"SafeTriage","textPreview":"SafeTriage","textChars":10,"textLines":1,"bbox":[70,120,660,86]}
+{"kind":"textbox","id":"sh/ylc3exk7","slide":1,"text":"An agentic AI assistant for patient portal message triage","textPreview":"An agentic AI assistant for patient portal message triage","textChars":57,"textLines":1,"bbox":[72,220,690,96]}
+{"kind":"textbox","id":"sh/zmlknils","slide":1,"text":"Clinician-supervised response drafting with RAG, safety stops, and audit trails","textPreview":"Clinician-supervised response drafting with RAG, safety stops, and audit trails","textChars":79,"textLines":1,"bbox":[74,330,660,90]}
+{"kind":"shape","id":"sh/8relk72p","slide":1,"bbox":[830,120,350,380]}
+{"kind":"textbox","id":"sh/9snmtc3u","slide":1,"text":"10-minute presentation","textPreview":"10-minute presentation","textChars":22,"textLines":1,"bbox":[872,168,270,38]}
+{"kind":"textbox","id":"sh/mpw3ixkj","slide":1,"text":"Problem\nAgentic workflow\nPrototype demo\nSafety & oversight\nQ&A","textPreview":"Problem | Agentic workflow | Prototype demo | Safety & oversight | Q&A","textChars":62,"textLines":5,"bbox":[900,240,220,210]}
+{"kind":"textbox","id":"sh/7q54r2l4","slide":1,"text":"SafeTriage | CA6117 | 1","textPreview":"SafeTriage | CA6117 | 1","textChars":23,"textLines":1,"bbox":[1015,675,200,24]}
+{"kind":"notes","id":"nt/mnrmxa","slide":1,"text":"English:\nGood morning. Our project is SafeTriage, an agentic AI prototype for patient portal message triage. The idea is not to replace clinicians. It is to help nurses and care coordinators process messages safely, retrieve relevant guidance, draft responses, and escalate risk with a clear audit trail.\n中文：\n大家好。我们的项目是 SafeTriage，一个用于患者门户消息分诊的 agentic AI 原型。它不是替代医生，而是帮助护士和 care coordinator 更安全地处理消息、检索指南、生成回复草稿，并在有风险时升级处理，同时留下审计记录。\n[Sources]\nCA6117 Course Project Brief: prototype should show user input, agent workflow, grounding, human checkpoint, safety response, audit log, and evaluation artefacts."}
+{"kind":"slide","id":"sl/1hofck","slide":2,"title":"PROBLEM","textShapes":11}
+{"kind":"textbox","id":"sh/snqlor2d","slide":2,"text":"PROBLEM","textPreview":"PROBLEM","textChars":7,"textLines":1,"bbox":[64,40,580,26]}
+{"kind":"textbox","id":"sh/7mxkvm18","slide":2,"text":"Portal messages are a capacity problem, not just an inbox problem","textPreview":"Portal messages are a capacity problem, not just an inbox problem","textChars":65,"textLines":1,"bbox":[64,76,1080,102]}
+{"kind":"shape","id":"sh/61o3mhkn","slide":2,"bbox":[64,184,132,5]}
+{"kind":"textbox","id":"sh/50f2tcj2","slide":2,"text":"Patients benefit from asynchronous access, but every message still needs clinical triage, routing, documentation, and follow-up.","textPreview":"Patients benefit from asynchronous access, but every message still needs clinical triage, routing, documentation, and follow-up.","textChars":128,"textLines":1,"bbox":[70,200,530,120]}
+{"kind":"shape","id":"sh/kz6lk72h","slide":2,"bbox":[690,188,220,150]}
+{"kind":"textbox","id":"sh/jyxkr21w","slide":2,"text":"11M","textPreview":"11M","textChars":3,"textLines":1,"bbox":[720,214,160,52]}
+{"kind":"textbox","id":"sh/yxo3ixkb","slide":2,"text":"projected health worker shortfall by 2030","textPreview":"projected health worker shortfall by 2030","textChars":41,"textLines":1,"bbox":[720,280,160,50]}
+{"kind":"shape","id":"sh/pwjm5gj6","slide":2,"bbox":[940,188,220,150]}
+{"kind":"textbox","id":"sh/4valwb2l","slide":2,"text":"340 -> 695","textPreview":"340 -> 695","textChars":10,"textLines":1,"bbox":[960,214,180,52]}
+{"kind":"textbox","id":"sh/6t832xgn","slide":2,"text":"mean quarterly portal advice messages in one primary-care study","textPreview":"mean quarterly portal advice messages in one primary-care study","textChars":63,"textLines":1,"bbox":[960,276,180,62]}
+{"kind":"shape","id":"sh/7uhkb2x8","slide":2,"bbox":[92,397,12,12]}
+{"kind":"textbox","id":"sh/8vql4nyt","slide":2,"text":"Routine requests and red flags arrive in the same queue","textPreview":"Routine requests and red flags arrive in the same queue","textChars":55,"textLines":1,"bbox":[120,390,972,52]}
+{"kind":"shape","id":"sh/twz2dsfe","slide":2,"bbox":[92,449,12,12]}
+{"kind":"textbox","id":"sh/y583ydgr","slide":2,"text":"Manual review is safe but hard to scale","textPreview":"Manual review is safe but hard to scale","textChars":39,"textLines":1,"bbox":[120,442,972,52]}
+{"kind":"shape","id":"sh/j6hk7ixc","slide":2,"bbox":[92,501,12,12]}
+{"kind":"textbox","id":"sh/k7ql0nyx","slide":2,"text":"Simple keyword routing can miss context and negation","textPreview":"Simple keyword routing can miss context and negation","textChars":52,"textLines":1,"bbox":[120,494,972,52]}
+{"kind":"textbox","id":"sh/lsz29sf2","slide":2,"text":"SafeTriage | CA6117 | 2","textPreview":"SafeTriage | CA6117 | 2","textChars":23,"textLines":1,"bbox":[1015,675,200,24]}
+{"kind":"notes","id":"nt/1hofck","slide":2,"text":"English:\nThe problem is capacity. Patient portals improve access, but they also create more asynchronous clinical work. Staff need to separate routine requests from urgent symptoms. The WHO workforce shortfall and portal-message workload studies show why this is not a small clerical issue.\n中文：\n这个问题本质上是医疗服务能力不足。患者门户提高了可及性，但也带来了更多异步临床工作。工作人员需要在同一个 inbox 里区分普通请求和紧急症状。WHO 的医护短缺预测和 patient portal 研究都说明，这不只是行政问题。\n[Sources]\nWHO Health workforce: projected shortfall of 11 million health workers by 2030. https://www.who.int/health-topics/health-workforce\nHolmgren AJ et al. Patient Portal Message Volume and Time Spent on the EHR, JGIM 2024. https://pmc.ncbi.nlm.nih.gov/articles/PMC10973312/"}
+{"kind":"slide","id":"sl/gqev3w","slide":3,"title":"GAP","textShapes":12}
+{"kind":"textbox","id":"sh/dojutovm","slide":3,"text":"GAP","textPreview":"GAP","textChars":3,"textLines":1,"bbox":[64,40,580,26]}
+{"kind":"textbox","id":"sh/qlsby9wb","slide":3,"text":"Current tools help fragments of the task, but not the workflow","textPreview":"Current tools help fragments of the task, but not the workflow","textChars":62,"textLines":1,"bbox":[64,76,1080,102]}
+{"kind":"shape","id":"sh/bm1credg","slide":3,"bbox":[64,184,132,5]}
+{"kind":"shape","id":"sh/ojatwje5","slide":3,"bbox":[78,210,250,270]}
+{"kind":"textbox","id":"sh/pkjup4vq","slide":3,"text":"Manual nurse review","textPreview":"Manual nurse review","textChars":19,"textLines":1,"bbox":[100,240,206,62]}
+{"kind":"textbox","id":"sh/2xsbu9wz","slide":3,"text":"Safe and accountable, but slow when volume rises.","textPreview":"Safe and accountable, but slow when volume rises.","textChars":49,"textLines":1,"bbox":[100,326,206,112]}
+{"kind":"shape","id":"sh/3i1snedk","slide":3,"bbox":[370,210,250,270]}
+{"kind":"textbox","id":"sh/8fut83u9","slide":3,"text":"Static FAQ / forms","textPreview":"Static FAQ / forms","textChars":18,"textLines":1,"bbox":[392,240,206,62]}
+{"kind":"textbox","id":"sh/9gnu18vu","slide":3,"text":"Useful for common questions, weak for ambiguous symptoms.","textPreview":"Useful for common questions, weak for ambiguous symptoms.","textChars":57,"textLines":1,"bbox":[392,326,206,112]}
+{"kind":"shape","id":"sh/dgj6lsvy","slide":3,"bbox":[662,210,250,270]}
+{"kind":"textbox","id":"sh/cfa5sned","slide":3,"text":"Keyword routing","textPreview":"Keyword routing","textChars":15,"textLines":1,"bbox":[684,240,206,62]}
+{"kind":"textbox","id":"sh/be1ojids","slide":3,"text":"Fast, but brittle: “no chest pain” can look like “chest pain”.","textPreview":"Fast, but brittle: “no chest pain” can look like “chest pain”.","textChars":62,"textLines":1,"bbox":[684,326,206,112]}
+{"kind":"shape","id":"sh/qdsnqxw7","slide":3,"bbox":[954,210,250,270]}
+{"kind":"textbox","id":"sh/pcj6hsvm","slide":3,"text":"General chatbot","textPreview":"General chatbot","textChars":15,"textLines":1,"bbox":[976,240,206,62]}
+{"kind":"textbox","id":"sh/oba5one1","slide":3,"text":"Fluent, but often lacks tools, state, source grounding, and audit.","textPreview":"Fluent, but often lacks tools, state, source grounding, and audit.","textChars":66,"textLines":1,"bbox":[976,326,206,112]}
+{"kind":"textbox","id":"sh/3q1ofidw","slide":3,"text":"SafeTriage focuses on the whole loop: triage, retrieval, review, escalation, and logging.","textPreview":"SafeTriage focuses on the whole loop: triage, retrieval, review, escalation, and logging.","textChars":89,"textLines":1,"bbox":[118,548,1040,54]}
+{"kind":"textbox","id":"sh/2p8nmdwb","slide":3,"text":"SafeTriage | CA6117 | 3","textPreview":"SafeTriage | CA6117 | 3","textChars":23,"textLines":1,"bbox":[1015,675,200,24]}
+{"kind":"notes","id":"nt/gqev3w","slide":3,"text":"English:\nExisting solutions are useful but incomplete. A nurse can judge context, but the workload is high. A rule system is consistent, but it is brittle. A chatbot can draft text, but it may not retrieve sources, manage state, or create an audit trail. SafeTriage is designed around the workflow rather than a single chat response.\n中文：\n现有方案各有作用，但不完整。护士能判断上下文，但工作量大。规则系统一致，但很脆弱。聊天机器人能写回复，但不一定会检索来源、维护状态、生成审计记录。SafeTriage 的重点是完整 workflow，而不是单次聊天回答。\n[Sources]\nHolmgren AJ et al. Patient Portal Message Volume and Time Spent on the EHR, JGIM 2024. https://pmc.ncbi.nlm.nih.gov/articles/PMC10973312/\nCA6117 Course Project Brief: prototype should show user input, agent workflow, grounding, human checkpoint, safety response, audit log, and evaluation artefacts."}
+{"kind":"slide","id":"sl/raxixh","slide":4,"title":"AGENTIC WORKFLOW","textShapes":12}
+{"kind":"textbox","id":"sh/wf2d03ad","slide":4,"text":"AGENTIC WORKFLOW","textPreview":"AGENTIC WORKFLOW","textChars":16,"textLines":1,"bbox":[64,40,580,26]}
+{"kind":"textbox","id":"sh/vetcry98","slide":4,"text":"The agent executes a bounded triage workflow","textPreview":"The agent executes a bounded triage workflow","textChars":44,"textLines":1,"bbox":[64,76,1080,102]}
+{"kind":"shape","id":"sh/udkvydsn","slide":4,"bbox":[64,184,132,5]}
+{"kind":"shape","id":"sh/9cbup8r2","slide":4,"bbox":[300,338,90,3]}
+{"kind":"shape","id":"sh/8b2dw3ah","slide":4,"bbox":[610,338,90,3]}
+{"kind":"shape","id":"sh/7atcny9w","slide":4,"bbox":[910,338,90,3]}
+{"kind":"shape","id":"sh/m9kvutsb","slide":4,"bbox":[82,270,220,132]}
+{"kind":"textbox","id":"sh/t8fe1sr6","slide":4,"text":"Perceive","textPreview":"Perceive","textChars":8,"textLines":1,"bbox":[100,286,184,32]}
+{"kind":"textbox","id":"sh/s7md8nal","slide":4,"text":"Parse the message, extract symptoms, intent, and patient context.","textPreview":"Parse the message, extract symptoms, intent, and patient context.","textChars":65,"textLines":1,"bbox":[100,328,184,58]}
+{"kind":"shape","id":"sh/q5sret4r","slide":4,"bbox":[390,270,220,132]}
+{"kind":"textbox","id":"sh/bq187y5c","slide":4,"text":"Reason","textPreview":"Reason","textChars":6,"textLines":1,"bbox":[408,286,184,32]}
+{"kind":"textbox","id":"sh/cra9g3mx","slide":4,"text":"Retrieve sources, classify urgency, check red flags and prompt injection.","textPreview":"Retrieve sources, classify urgency, check red flags and prompt injection.","textChars":73,"textLines":1,"bbox":[408,328,184,58]}
+{"kind":"shape","id":"sh/dsjq98ni","slide":4,"bbox":[700,270,210,132]}
+{"kind":"textbox","id":"sh/218ratov","slide":4,"text":"Act","textPreview":"Act","textChars":3,"textLines":1,"bbox":[718,286,174,32]}
+{"kind":"textbox","id":"sh/32183e50","slide":4,"text":"Draft response, route queue, write audit entry.","textPreview":"Draft response, route queue, write audit entry.","textChars":47,"textLines":1,"bbox":[718,328,174,58]}
+{"kind":"shape","id":"sh/o3a9cj6l","slide":4,"bbox":[1000,270,210,132]}
+{"kind":"textbox","id":"sh/p4jq5on6","slide":4,"text":"Review","textPreview":"Review","textChars":6,"textLines":1,"bbox":[1018,286,174,32]}
+{"kind":"textbox","id":"sh/mxcrmd4z","slide":4,"text":"Human approves, edits, rejects, escalates, or audits.","textPreview":"Human approves, edits, rejects, escalates, or audits.","textChars":53,"textLines":1,"bbox":[1018,328,174,58]}
+{"kind":"textbox","id":"sh/nylsfi5k","slide":4,"text":"What makes it agentic: planning + state + tool calls + RAG-style grounding + stop conditions.","textPreview":"What makes it agentic: planning + state + tool calls + RAG-style grounding + stop conditions.","textChars":93,"textLines":1,"bbox":[116,510,1030,70]}
+{"kind":"textbox","id":"sh/jqdwr6hk","slide":4,"text":"SafeTriage | CA6117 | 4","textPreview":"SafeTriage | CA6117 | 4","textChars":23,"textLines":1,"bbox":[1015,675,200,24]}
+{"kind":"notes","id":"nt/raxixh","slide":4,"text":"English:\nThis is agentic because it plans and executes multiple steps. It perceives the patient message, reasons with patient context and retrieved guidance, acts by drafting and routing, and then waits for human review. The stop condition is explicit: unsafe or high-risk messages cannot proceed as routine advice.\n中文：\n它之所以是 agentic，是因为它会规划并执行多个步骤。它先感知患者消息，再结合患者背景和检索到的指南进行推理，然后生成草稿和路由建议，最后等待人工审核。停止条件也很明确：高风险或不安全消息不能按普通建议处理。\n[Sources]\nCA6117 Course Project Brief: prototype should show user input, agent workflow, grounding, human checkpoint, safety response, audit log, and evaluation artefacts.\nFDA Clinical Decision Support Software guidance, Jan 2026: CDS should support healthcare professionals and not replace judgment for time-critical decisions. https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"}
+{"kind":"slide","id":"sl/uifljr","slide":5,"title":"SYSTEM DESIGN","textShapes":9}
+{"kind":"textbox","id":"sh/exwzi5g3","slide":5,"text":"SYSTEM DESIGN","textPreview":"SYSTEM DESIGN","textChars":13,"textLines":1,"bbox":[64,40,580,26]}
+{"kind":"textbox","id":"sh/107ydkfu","slide":5,"text":"The design keeps tools useful but scoped","textPreview":"The design keeps tools useful but scoped","textChars":40,"textLines":1,"bbox":[64,76,1080,102]}
+{"kind":"shape","id":"sh/gzehkfy9","slide":5,"bbox":[64,184,132,5]}
+{"kind":"shape","id":"sh/ru5g7axc","slide":5,"bbox":[500,300,280,120]}
+{"kind":"textbox","id":"sh/6twfe5g7","slide":5,"text":"SafeTriage\nAgent Orchestrator","textPreview":"SafeTriage | Agent Orchestrator","textChars":29,"textLines":2,"bbox":[524,326,232,62]}
+{"kind":"shape","id":"sh/twny90fi","slide":5,"bbox":[90,225,220,92]}
+{"kind":"textbox","id":"sh/svexgfyx","slide":5,"text":"Portal\nmessage","textPreview":"Portal | message","textChars":14,"textLines":2,"bbox":[110,243,180,46]}
+{"kind":"shape","id":"sh/jqlg3qxg","slide":5,"bbox":[310,271,95,3]}
+{"kind":"shape","id":"sh/i5cfalgv","slide":5,"bbox":[405,271,3,89]}
+{"kind":"shape","id":"sh/cbax87mp","slide":5,"bbox":[405,360,95,3]}
+{"kind":"shape","id":"sh/xcjyhcna","slide":5,"bbox":[90,435,220,92]}
+{"kind":"textbox","id":"sh/a9sf6h4z","slide":5,"text":"Patient\ncontext DB","textPreview":"Patient | context DB","textChars":18,"textLines":2,"bbox":[110,453,180,46]}
+{"kind":"shape","id":"sh/ba1gfm54","slide":5,"bbox":[310,481,95,3]}
+{"kind":"shape","id":"sh/o7qx47mt","slide":5,"bbox":[405,360,3,121]}
+{"kind":"shape","id":"sh/p8jydcne","slide":5,"bbox":[405,360,95,3]}
+{"kind":"shape","id":"sh/2l8f2x4n","slide":5,"bbox":[900,190,220,92]}
+{"kind":"textbox","id":"sh/n6hgb258","slide":5,"text":"Guideline\nknowledge base","textPreview":"Guideline | knowledge base","textChars":24,"textLines":2,"bbox":[920,208,180,46]}
+{"kind":"shape","id":"sh/83uhgrmx","slide":5,"bbox":[780,236,60,3]}
+{"kind":"shape","id":"sh/943ypw3i","slide":5,"bbox":[840,236,3,124]}
+{"kind":"shape","id":"sh/hof6dcra","slide":5,"bbox":[840,360,60,3]}
+{"kind":"shape","id":"sh/wn6pk7ap","slide":5,"bbox":[900,340,220,92]}
+{"kind":"textbox","id":"sh/vmxob29k","slide":5,"text":"Safety rules\nengine","textPreview":"Safety rules | engine","textChars":19,"textLines":2,"bbox":[920,358,180,46]}
+{"kind":"shape","id":"sh/ulo7ixsz","slide":5,"bbox":[780,386,60,3]}
+{"kind":"shape","id":"sh/9kf69sre","slide":5,"bbox":[840,360,3,26]}
+{"kind":"shape","id":"sh/8j6pgnat","slide":5,"bbox":[840,360,60,3]}
+{"kind":"shape","id":"sh/7ixo7i98","slide":5,"bbox":[900,490,220,92]}
+{"kind":"textbox","id":"sh/mh47edsn","slide":5,"text":"Audit log\nstore","textPreview":"Audit log | store","textChars":15,"textLines":2,"bbox":[920,508,180,46]}
+{"kind":"shape","id":"sh/lgv65sr2","slide":5,"bbox":[780,536,60,3]}
+{"kind":"shape","id":"sh/kfmpcnax","slide":5,"bbox":[840,360,3,176]}
+{"kind":"shape","id":"sh/alk3mt8f","slide":5,"bbox":[840,360,60,3]}
+{"kind":"textbox","id":"sh/bmt4fep0","slide":5,"text":"SafeTriage | CA6117 | 5","textPreview":"SafeTriage | CA6117 | 5","textChars":23,"textLines":1,"bbox":[1015,675,200,24]}
+{"kind":"notes","id":"nt/uifljr","slide":5,"text":"English:\nThe system is intentionally scoped. In the prototype, the data sources are simulated. In a real setting, these would become audited APIs: patient context lookup, approved guideline search, safety-rule checks, and audit logging. Least privilege matters because an agent with broad tool access could create new risks.\n中文：\n系统设计是有边界的。在原型中，所有数据源都是模拟的。真实部署时，这些会变成受审计的 API：患者背景查询、批准过的指南检索、安全规则检查和审计日志。最小权限非常重要，因为 agent 如果有过多工具权限，会带来新的风险。\n[Sources]\nHHS HIPAA Privacy and Security Rule summaries: protect PHI/ePHI with appropriate safeguards. https://www.hhs.gov/hipaa/for-professionals/privacy/index.html\nOWASP GenAI/LLM risks include prompt injection, sensitive information disclosure, excessive agency, and overreliance. https://owasp.org/www-project-top-10-for-large-language-model-applications/\nSafeTriage React/Vite prototype in local repository; screenshots and GIF captured with Playwright."}
+{"kind":"slide","id":"sl/9xsdhk","slide":6,"title":"DEMO","textShapes":8}
+{"kind":"textbox","id":"sh/vu583ulo","slide":6,"text":"DEMO","textPreview":"DEMO","textChars":4,"textLines":1,"bbox":[64,40,580,26]}
+{"kind":"textbox","id":"sh/gvepwzm9","slide":6,"text":"Prototype demo: the workflow is visible end to end","textPreview":"Prototype demo: the workflow is visible end to end","textChars":50,"textLines":1,"bbox":[64,76,1080,102]}
+{"kind":"shape","id":"sh/hw7q5k3u","slide":6,"bbox":[64,184,132,5]}
+{"kind":"shape","id":"sh/7q5ozals","slide":6,"bbox":[905,205,270,390]}
+{"kind":"textbox","id":"sh/8repsfmd","slide":6,"text":"Demo path","textPreview":"Demo path","textChars":9,"textLines":1,"bbox":[930,230,220,34]}
+{"kind":"shape","id":"sh/tsn61k3y","slide":6,"bbox":[930,299,12,12]}
+{"kind":"textbox","id":"sh/y1c7m54b","slide":6,"text":"Open medium-risk respiratory case","textPreview":"Open medium-risk respiratory case","textChars":33,"textLines":1,"bbox":[958,292,192,80]}
+{"kind":"shape","id":"sh/j2lovalg","slide":6,"bbox":[930,379,12,12]}
+{"kind":"textbox","id":"sh/j61s3alo","slide":6,"text":"Switch to chest-pain red flag","textPreview":"Switch to chest-pain red flag","textChars":29,"textLines":1,"bbox":[958,372,192,80]}
+{"kind":"shape","id":"sh/i5sbup43","slide":6,"bbox":[930,459,12,12]}
+{"kind":"textbox","id":"sh/5sju5k3e","slide":6,"text":"Run agent plan","textPreview":"Run agent plan","textChars":14,"textLines":1,"bbox":[958,452,192,80]}
+{"kind":"shape","id":"sh/4ratwfmt","slide":6,"bbox":[930,539,12,12]}
+{"kind":"textbox","id":"sh/ru1c7ulk","slide":6,"text":"Escalate and log decision","textPreview":"Escalate and log decision","textChars":25,"textLines":1,"bbox":[958,532,192,80]}
+{"kind":"textbox","id":"sh/qtsbyp4z","slide":6,"text":"SafeTriage | CA6117 | 6","textPreview":"SafeTriage | CA6117 | 6","textChars":23,"textLines":1,"bbox":[1015,675,200,24]}
+{"kind":"image","id":"im/beh8ja10","slide":6,"name":"","alt":"Animated SafeTriage demo showing message selection, agent run, and human escalation","bbox":[78,180,780,520]}
+{"kind":"notes","id":"nt/9xsdhk","slide":6,"text":"English:\nThis slide contains an animated GIF captured from the prototype. First, the medium respiratory case shows source grounding and same-day review. Then the chest-pain case shows the safety boundary: the agent changes to urgent escalation, and the human decision is written into the audit trail.\n中文：\n这一页嵌入的是从原型录制的动态 GIF。首先，中等风险的呼吸症状案例展示了来源检索和当日审核。然后，胸痛案例展示安全边界：agent 切换为 urgent escalation，并把人工升级决定写入 audit trail。\n[Sources]\nSafeTriage React/Vite prototype in local repository; screenshots and GIF captured with Playwright.\nCDC Respiratory Illnesses: emergency warning signs include difficulty breathing and persistent chest pain or pressure. https://www.cdc.gov/respiratory-viruses/about/index.html"}
+{"kind":"slide","id":"sl/1dbkwd","slide":7,"title":"SAFETY & OVERSIGHT","textShapes":21}
+{"kind":"textbox","id":"sh/dwr2hsre","slide":7,"text":"SAFETY & OVERSIGHT","textPreview":"SAFETY & OVERSIGHT","textChars":18,"textLines":1,"bbox":[64,40,580,26]}
+{"kind":"textbox","id":"sh/qtg3md83","slide":7,"text":"Safety is designed as a workflow boundary","textPreview":"Safety is designed as a workflow boundary","textChars":41,"textLines":1,"bbox":[64,76,1080,102]}
+{"kind":"shape","id":"sh/rupkfi9o","slide":7,"bbox":[64,184,132,5]}
+{"kind":"shape","id":"sh/4rylk3qx","slide":7,"bbox":[72,190,210,44]}
+{"kind":"textbox","id":"sh/5s72d8ri","slide":7,"text":"Risk","textPreview":"Risk","textChars":4,"textLines":1,"bbox":[84,199,186,24]}
+{"kind":"shape","id":"sh/ipg3id8r","slide":7,"bbox":[302,190,420,44]}
+{"kind":"textbox","id":"sh/3qpkbi9c","slide":7,"text":"Why it matters","textPreview":"Why it matters","textChars":14,"textLines":1,"bbox":[314,199,396,24]}
+{"kind":"shape","id":"sh/on2lw7q1","slide":7,"bbox":[752,190,420,44]}
+{"kind":"textbox","id":"sh/pobmpcrm","slide":7,"text":"Mitigation","textPreview":"Mitigation","textChars":10,"textLines":1,"bbox":[764,199,396,24]}
+{"kind":"shape","id":"sh/5wr6pcfi","slide":7,"bbox":[72,236,210,58]}
+{"kind":"textbox","id":"sh/4vi5w7yx","slide":7,"text":"Red flags","textPreview":"Red flags","textChars":9,"textLines":1,"bbox":[84,246,186,36]}
+{"kind":"shape","id":"sh/3u9on2xc","slide":7,"bbox":[302,236,420,58]}
+{"kind":"textbox","id":"sh/itgnuxgr","slide":7,"text":"Chest pain, severe breathlessness, confusion, blue lips","textPreview":"Chest pain, severe breathlessness, confusion, blue lips","textChars":55,"textLines":1,"bbox":[314,246,396,36]}
+{"kind":"shape","id":"sh/hs76lcfm","slide":7,"bbox":[752,236,420,58]}
+{"kind":"textbox","id":"sh/g7y5s7y1","slide":7,"text":"Safe stop + urgent escalation","textPreview":"Safe stop + urgent escalation","textChars":29,"textLines":1,"bbox":[764,246,396,36]}
+{"kind":"shape","id":"sh/v6poj2xg","slide":7,"bbox":[72,294,210,58]}
+{"kind":"textbox","id":"sh/u5gnqxgv","slide":7,"text":"Hallucination","textPreview":"Hallucination","textChars":13,"textLines":1,"bbox":[84,304,186,36]}
+{"kind":"shape","id":"sh/1ob6xwfq","slide":7,"bbox":[302,294,420,58]}
+{"kind":"textbox","id":"sh/0n2p4ry5","slide":7,"text":"Unsupported or over-specific clinical advice","textPreview":"Unsupported or over-specific clinical advice","textChars":44,"textLines":1,"bbox":[314,304,396,36]}
+{"kind":"shape","id":"sh/kjuhgzqd","slide":7,"bbox":[752,294,420,58]}
+{"kind":"textbox","id":"sh/lk3ip4ry","slide":7,"text":"RAG sources + review before sending","textPreview":"RAG sources + review before sending","textChars":35,"textLines":1,"bbox":[764,304,396,36]}
+{"kind":"shape","id":"sh/yhszepsn","slide":7,"bbox":[72,352,210,58]}
+{"kind":"textbox","id":"sh/zilgnu98","slide":7,"text":"Prompt injection","textPreview":"Prompt injection","textChars":16,"textLines":1,"bbox":[84,362,186,36]}
+{"kind":"shape","id":"sh/cfahczah","slide":7,"bbox":[302,352,420,58]}
+{"kind":"textbox","id":"sh/xgjylkr2","slide":7,"text":"“Ignore instructions” or reveal hidden prompt","textPreview":"“Ignore instructions” or reveal hidden prompt","textChars":45,"textLines":1,"bbox":[314,362,396,36]}
+{"kind":"shape","id":"sh/adszapsb","slide":7,"bbox":[752,352,420,58]}
+{"kind":"textbox","id":"sh/be1gju9w","slide":7,"text":"Refusal + manual safety review","textPreview":"Refusal + manual safety review","textChars":30,"textLines":1,"bbox":[764,362,396,36]}
+{"kind":"shape","id":"sh/obah8fal","slide":7,"bbox":[72,410,210,58]}
+{"kind":"textbox","id":"sh/pcjyhkrq","slide":7,"text":"Overreliance","textPreview":"Overreliance","textChars":12,"textLines":1,"bbox":[84,420,186,36]}
+{"kind":"shape","id":"sh/rmh0rats","slide":7,"bbox":[302,410,420,58]}
+{"kind":"textbox","id":"sh/ql8zi5c7","slide":7,"text":"Clinician accepts AI output too quickly","textPreview":"Clinician accepts AI output too quickly","textChars":39,"textLines":1,"bbox":[314,420,396,36]}
+{"kind":"shape","id":"sh/d8zitkby","slide":7,"bbox":[752,410,420,58]}
+{"kind":"textbox","id":"sh/snqhkfud","slide":7,"text":"Confidence, rationale, sources, editable draft","textPreview":"Confidence, rationale, sources, editable draft","textChars":46,"textLines":1,"bbox":[764,420,396,36]}
+{"kind":"shape","id":"sh/fah0vuto","slide":7,"bbox":[72,468,210,58]}
+{"kind":"textbox","id":"sh/e98zmpcj","slide":7,"text":"Privacy","textPreview":"Privacy","textChars":7,"textLines":1,"bbox":[84,478,186,36]}
+{"kind":"shape","id":"sh/1cjixkbu","slide":7,"bbox":[302,468,420,58]}
+{"kind":"textbox","id":"sh/0ba1ofu9","slide":7,"text":"Patient messages may contain sensitive data","textPreview":"Patient messages may contain sensitive data","textChars":43,"textLines":1,"bbox":[314,478,396,36]}
+{"kind":"shape","id":"sh/ne10zut0","slide":7,"bbox":[752,468,420,58]}
+{"kind":"textbox","id":"sh/2dsjqpcf","slide":7,"text":"Simulated data now; access control and audit in deployment","textPreview":"Simulated data now; access control and audit in deployment","textChars":58,"textLines":1,"bbox":[764,478,396,36]}
+{"kind":"textbox","id":"sh/mh03mtkr","slide":7,"text":"SafeTriage | CA6117 | 7","textPreview":"SafeTriage | CA6117 | 7","textChars":23,"textLines":1,"bbox":[1015,675,200,24]}
+{"kind":"notes","id":"nt/1dbkwd","slide":7,"text":"English:\nSafety is not an afterthought. The system is designed so that risk changes the workflow. Red flags lead to safe stop and escalation. Hallucination risk is reduced with source grounding and human review. Prompt injection is treated as untrusted input. Privacy is handled in the prototype by using only fictional data.\n中文：\n安全不是事后补充，而是 workflow 的边界。风险会改变流程：红旗症状触发停止和升级；幻觉风险通过来源检索和人工审核降低；prompt injection 被视为不可信输入；隐私方面，原型只使用虚构数据。\n[Sources]\nCDC Respiratory Illnesses: emergency warning signs include difficulty breathing and persistent chest pain or pressure. https://www.cdc.gov/respiratory-viruses/about/index.html\nOWASP GenAI/LLM risks include prompt injection, sensitive information disclosure, excessive agency, and overreliance. https://owasp.org/www-project-top-10-for-large-language-model-applications/\nHHS HIPAA Privacy and Security Rule summaries: protect PHI/ePHI with appropriate safeguards. https://www.hhs.gov/hipaa/for-professionals/privacy/index.html\nFDA Clinical Decision Support Software guidance, Jan 2026: CDS should support healthcare professionals and not replace judgment for time-critical decisions. https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"}
+{"kind":"slide","id":"sl/rdkmob","slide":8,"title":"EVALUATION","textShapes":21}
+{"kind":"textbox","id":"sh/b29kzy9c","slide":8,"text":"EVALUATION","textPreview":"EVALUATION","textChars":10,"textLines":1,"bbox":[64,40,580,26]}
+{"kind":"textbox","id":"sh/c3il83qx","slide":8,"text":"Evaluation checks workflow behaviour, not medical authority","textPreview":"Evaluation checks workflow behaviour, not medical authority","textChars":59,"textLines":1,"bbox":[64,76,1080,102]}
+{"kind":"shape","id":"sh/d4r218ri","slide":8,"bbox":[64,184,132,5]}
+{"kind":"textbox","id":"sh/2dgj2t8v","slide":8,"text":"Prototype evidence","textPreview":"Prototype evidence","textChars":18,"textLines":1,"bbox":[76,190,360,36]}
+{"kind":"shape","id":"sh/3epkvy9g","slide":8,"bbox":[76,245,930,58]}
+{"kind":"textbox","id":"sh/ofyl43q1","slide":8,"text":"Routine refill","textPreview":"Routine refill","textChars":14,"textLines":1,"bbox":[94,257,250,26]}
+{"kind":"textbox","id":"sh/pgr2x8rm","slide":8,"text":"Low priority + medication queue","textPreview":"Low priority + medication queue","textChars":31,"textLines":1,"bbox":[376,257,500,26]}
+{"kind":"textbox","id":"sh/m9k3ex8z","slide":8,"text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[896,257,82,34]}
+{"kind":"shape","id":"sh/natk7i9k","slide":8,"bbox":[76,303,930,58]}
+{"kind":"textbox","id":"sh/n2lof6pw","slide":8,"text":"Worsening breathlessness","textPreview":"Worsening breathlessness","textChars":24,"textLines":1,"bbox":[94,315,250,26]}
+{"kind":"textbox","id":"sh/m1c761ob","slide":8,"text":"Medium priority + same-day review","textPreview":"Medium priority + same-day review","textChars":33,"textLines":1,"bbox":[376,315,500,26]}
+{"kind":"textbox","id":"sh/94n6hg72","slide":8,"text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[896,315,82,34]}
+{"kind":"shape","id":"sh/o3up8b6h","slide":8,"bbox":[76,361,930,58]}
+{"kind":"textbox","id":"sh/bq5ojqp8","slide":8,"text":"Chest pain","textPreview":"Chest pain","textChars":10,"textLines":1,"bbox":[94,373,250,26]}
+{"kind":"textbox","id":"sh/a5w7alon","slide":8,"text":"Safe stop + urgent escalation","textPreview":"Safe stop + urgent escalation","textChars":29,"textLines":1,"bbox":[376,373,500,26]}
+{"kind":"textbox","id":"sh/xsn6lg7y","slide":8,"text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[896,373,82,34]}
+{"kind":"shape","id":"sh/wrepcv6d","slide":8,"bbox":[76,419,930,58]}
+{"kind":"textbox","id":"sh/ju58nqp4","slide":8,"text":"Prompt injection","textPreview":"Prompt injection","textChars":16,"textLines":1,"bbox":[94,431,250,26]}
+{"kind":"textbox","id":"sh/itw7eloj","slide":8,"text":"Refusal + manual review","textPreview":"Refusal + manual review","textChars":23,"textLines":1,"bbox":[376,431,500,26]}
+{"kind":"textbox","id":"sh/up0r6p8r","slide":8,"text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[896,431,82,34]}
+{"kind":"shape","id":"sh/fq9sfu9c","slide":8,"bbox":[76,477,930,58]}
+{"kind":"textbox","id":"sh/gri98zqx","slide":8,"text":"Negation handling","textPreview":"Negation handling","textChars":17,"textLines":1,"bbox":[94,489,250,26]}
+{"kind":"textbox","id":"sh/hsrah4ri","slide":8,"text":"“No chest pain” is not high-risk by keyword alone","textPreview":"“No chest pain” is not high-risk by keyword alone","textChars":49,"textLines":1,"bbox":[376,489,500,26]}
+{"kind":"textbox","id":"sh/6lgr2p8v","slide":8,"text":"Pass","textPreview":"Pass","textChars":4,"textLines":1,"bbox":[896,489,82,34]}
+{"kind":"shape","id":"sh/7mpsbu9g","slide":8,"bbox":[1038,244,168,225]}
+{"kind":"textbox","id":"sh/sni94fql","slide":8,"text":"Verified","textPreview":"Verified","textChars":8,"textLines":1,"bbox":[1060,278,124,36]}
+{"kind":"textbox","id":"sh/toradkr6","slide":8,"text":"lint\nbuild\nsmoke\nmobile","textPreview":"lint | build | smoke | mobile","textChars":23,"textLines":4,"bbox":[1060,338,124,100]}
+{"kind":"textbox","id":"sh/qhkbe98z","slide":8,"text":"SafeTriage | CA6117 | 8","textPreview":"SafeTriage | CA6117 | 8","textChars":23,"textLines":1,"bbox":[1015,675,200,24]}
+{"kind":"notes","id":"nt/rdkmob","slide":8,"text":"English:\nOur evaluation is deliberately scoped. We are not claiming clinical validation. Instead, we check whether the prototype follows the required workflow: retrieve sources, classify urgency, apply safety stops, show human controls, and record an audit trail. The most useful error found was the early keyword issue around “no chest pain”, which we fixed with negation handling.\n中文：\n我们的评估范围是有意控制的。我们不声称临床验证，而是检查原型是否符合课程要求的 workflow：检索来源、分类紧急程度、执行安全停止、提供人工控制、记录审计日志。最有价值的错误是早期 “no chest pain” 的关键词误判，我们用否定语境处理修复了。\n[Sources]\nCA6117 Course Project Brief: prototype should show user input, agent workflow, grounding, human checkpoint, safety response, audit log, and evaluation artefacts.\nSafeTriage React/Vite prototype in local repository; screenshots and GIF captured with Playwright."}
+{"kind":"slide","id":"sl/z06tlb","slide":9,"title":"CONCLUSION","textShapes":9}
+{"kind":"textbox","id":"sh/8bel0zuh","slide":9,"text":"CONCLUSION","textPreview":"CONCLUSION","textChars":10,"textLines":1,"bbox":[64,40,580,26]}
+{"kind":"textbox","id":"sh/na5krutw","slide":9,"text":"The value is supervised agency, not autonomous medicine","textPreview":"The value is supervised agency, not autonomous medicine","textChars":55,"textLines":1,"bbox":[64,76,1080,102]}
+{"kind":"shape","id":"sh/m9cjypcb","slide":9,"bbox":[64,184,132,5]}
+{"kind":"textbox","id":"sh/l832pkbq","slide":9,"text":"SafeTriage shows how agentic AI can reduce coordination burden while preserving clinical accountability.","textPreview":"SafeTriage shows how agentic AI can reduce coordination burden while preserving clinical accountability.","textChars":104,"textLines":1,"bbox":[95,215,1070,100]}
+{"kind":"shape","id":"sh/07u1wfu5","slide":9,"bbox":[175,367,12,12]}
+{"kind":"textbox","id":"sh/z6lknatk","slide":9,"text":"Bounded task: patient-message triage and draft preparation","textPreview":"Bounded task: patient-message triage and draft preparation","textChars":58,"textLines":1,"bbox":[203,360,832,54]}
+{"kind":"shape","id":"sh/y5cjupcf","slide":9,"bbox":[175,421,12,12]}
+{"kind":"textbox","id":"sh/54721oba","slide":9,"text":"Agentic core: plan, retrieve, reason, act, and maintain state","textPreview":"Agentic core: plan, retrieve, reason, act, and maintain state","textChars":61,"textLines":1,"bbox":[203,414,832,54]}
+{"kind":"shape","id":"sh/k3yl8jup","slide":9,"bbox":[175,475,12,12]}
+{"kind":"textbox","id":"sh/exkzm5sn","slide":9,"text":"Governance: safety stops, human checkpoint, and audit trail","textPreview":"Governance: safety stops, human checkpoint, and audit trail","textChars":59,"textLines":1,"bbox":[203,468,832,54]}
+{"kind":"shape","id":"sh/fyt0vqts","slide":9,"bbox":[175,529,12,12]}
+{"kind":"textbox","id":"sh/gz21ovad","slide":9,"text":"Next step: replace simulated sources with approved sandbox APIs","textPreview":"Next step: replace simulated sources with approved sandbox APIs","textChars":63,"textLines":1,"bbox":[203,522,832,54]}
+{"kind":"textbox","id":"sh/1kbix0by","slide":9,"text":"Q&A","textPreview":"Q&A","textChars":3,"textLines":1,"bbox":[1080,580,120,54]}
+{"kind":"textbox","id":"sh/6t0zilsb","slide":9,"text":"SafeTriage | CA6117 | 9","textPreview":"SafeTriage | CA6117 | 9","textChars":23,"textLines":1,"bbox":[1015,675,200,24]}
+{"kind":"notes","id":"nt/z06tlb","slide":9,"text":"English:\nTo conclude, SafeTriage is not an AI doctor. It is a supervised operations agent. The strongest part of the design is that the agent does useful work while staying within boundaries: it retrieves, reasons, drafts, escalates, and logs, but the human remains responsible for final action.\n中文：\n总结一下，SafeTriage 不是 AI 医生，而是一个受监督的医疗运营 agent。它最重要的设计点是：agent 可以做有价值的工作，但始终在边界内运行。它会检索、推理、写草稿、升级和记录，但最终行动仍由人类负责。\n[Sources]\nCA6117 Course Project Brief: prototype should show user input, agent workflow, grounding, human checkpoint, safety response, audit log, and evaluation artefacts.\nFDA Clinical Decision Support Software guidance, Jan 2026: CDS should support healthcare professionals and not replace judgment for time-critical decisions. https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software\nNIST AI RMF 1.0: manage AI risks to individuals, organizations, and society. https://doi.org/10.6028/NIST.AI.100-1"}
