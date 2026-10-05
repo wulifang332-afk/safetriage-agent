@@ -8,7 +8,7 @@ The prototype uses simulated patient data, clinic guideline snippets, safety rul
 
 ![SafeTriage interactive prototype demo](docs/assets/safetriage-demo.gif)
 
-GitHub Pages demo, once Pages is enabled for the repository: https://wulifang332-afk.github.io/safetriage-agent/
+Live GitHub Pages demo: https://wulifang332-afk.github.io/safetriage-agent/
 
 Use the sample patient inbox to run the agent workflow, switch between routine, medium-risk, high-risk, and prompt-injection cases, and try the human review controls.
 
